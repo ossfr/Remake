@@ -5,6 +5,7 @@ by Sirius
 
 shlex | Designing + Programming
 iRay  | Programming
+primelus | Custom UI + Designer
 
 ]]
 
