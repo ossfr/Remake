@@ -17,42 +17,40 @@ local RayfieldFolder = "Rayfield"
 local ConfigurationFolder = RayfieldFolder.."/Configurations"
 local ConfigurationExtension = ".rfld"
 
-
-
 local RayfieldLibrary = {
 	Flags = {},
 	Theme = {
 		Default = {
-			TextFont = "Roboto", -- Modern and clean font
-			TextColor = Color3.fromRGB(245, 245, 245), -- Light gray text for readability
+			TextFont = "Roboto",
+			TextColor = Color3.fromRGB(245, 245, 245),
 
-			Background = Color3.fromRGB(24, 24, 24), -- Dark background for a modern look
-			Topbar = Color3.fromRGB(34, 34, 34),
-			Shadow = Color3.fromRGB(20, 20, 20),
+			Background = Color3.fromRGB(18, 18, 18),
+			Topbar = Color3.fromRGB(28, 28, 28),
+			Shadow = Color3.fromRGB(10, 10, 10),
 
-			NotificationBackground = Color3.fromRGB(34, 34, 34),
-			NotificationActionsBackground = Color3.fromRGB(0, 172, 237), -- Cool cyan for action buttons
+			NotificationBackground = Color3.fromRGB(28, 28, 28),
+			NotificationActionsBackground = Color3.fromRGB(255, 0, 0),
 
 			TabBackground = Color3.fromRGB(45, 45, 45),
 			TabStroke = Color3.fromRGB(70, 70, 70),
-			TabBackgroundSelected = Color3.fromRGB(0, 172, 237), -- Bright cyan for selected tab
+			TabBackgroundSelected = Color3.fromRGB(255, 0, 0),
 			TabTextColor = Color3.fromRGB(245, 245, 245),
 			SelectedTabTextColor = Color3.fromRGB(245, 245, 245),
 
 			ElementBackground = Color3.fromRGB(30, 30, 30),
-			ElementBackgroundHover = Color3.fromRGB(50, 50, 50), -- Subtle hover effect
+			ElementBackgroundHover = Color3.fromRGB(50, 50, 50),
 			SecondaryElementBackground = Color3.fromRGB(40, 40, 40),
 			ElementStroke = Color3.fromRGB(50, 50, 50),
 			SecondaryElementStroke = Color3.fromRGB(40, 40, 40),
 
-			SliderBackground = Color3.fromRGB(0, 172, 237), -- Bright cyan for sliders
-			SliderProgress = Color3.fromRGB(0, 172, 237),
-			SliderStroke = Color3.fromRGB(50, 150, 200), -- Slightly darker for contrast
+			SliderBackground = Color3.fromRGB(255, 0, 0),
+			SliderProgress = Color3.fromRGB(255, 0, 0),
+			SliderStroke = Color3.fromRGB(50, 150, 200),
 
 			ToggleBackground = Color3.fromRGB(30, 30, 30),
-			ToggleEnabled = Color3.fromRGB(0, 198, 255), -- Bright cyan when enabled
-			ToggleDisabled = Color3.fromRGB(90, 90, 90), -- Dark gray when disabled
-			ToggleEnabledStroke = Color3.fromRGB(0, 220, 255),
+			ToggleEnabled = Color3.fromRGB(255, 0, 0),
+			ToggleDisabled = Color3.fromRGB(90, 90, 90),
+			ToggleEnabledStroke = Color3.fromRGB(220, 0, 0),
 			ToggleDisabledStroke = Color3.fromRGB(100, 100, 100),
 			ToggleEnabledOuterStroke = Color3.fromRGB(70, 70, 70),
 			ToggleDisabledOuterStroke = Color3.fromRGB(50, 50, 50),
@@ -62,41 +60,41 @@ local RayfieldLibrary = {
 			PlaceholderColor = Color3.fromRGB(200, 200, 200)
 		},
 		Light = {
-			TextFont = "Roboto", -- Modern and clean font
-			TextColor = Color3.fromRGB(0, 0, 0), -- Dark text for better contrast
+			TextFont = "Roboto",
+			TextColor = Color3.fromRGB(0, 0, 0),
 
-			Background = Color3.fromRGB(245, 245, 245), -- Light background for a clean look
+			Background = Color3.fromRGB(245, 245, 245),
 			Topbar = Color3.fromRGB(220, 220, 220),
 			Shadow = Color3.fromRGB(200, 200, 200),
 
 			NotificationBackground = Color3.fromRGB(240, 240, 240),
-			NotificationActionsBackground = Color3.fromRGB(0, 198, 255), -- Bright cyan for action buttons
+			NotificationActionsBackground = Color3.fromRGB(255, 0, 0),
 
 			TabBackground = Color3.fromRGB(255, 255, 255),
 			TabStroke = Color3.fromRGB(200, 200, 200),
-			TabBackgroundSelected = Color3.fromRGB(0, 198, 255), -- Bright cyan for selected tab
+			TabBackgroundSelected = Color3.fromRGB(255, 0, 0),
 			TabTextColor = Color3.fromRGB(0, 0, 0),
 			SelectedTabTextColor = Color3.fromRGB(0, 0, 0),
 
 			ElementBackground = Color3.fromRGB(255, 255, 255),
-			ElementBackgroundHover = Color3.fromRGB(240, 240, 240), -- Subtle hover effect
+			ElementBackgroundHover = Color3.fromRGB(240, 240, 240),
 			SecondaryElementBackground = Color3.fromRGB(230, 230, 230),
 			ElementStroke = Color3.fromRGB(200, 200, 200),
 			SecondaryElementStroke = Color3.fromRGB(150, 150, 150),
 
-			SliderBackground = Color3.fromRGB(0, 198, 255), -- Bright cyan for sliders
-			SliderProgress = Color3.fromRGB(0, 198, 255),
-			SliderStroke = Color3.fromRGB(0, 160, 230), -- Slightly darker for contrast
+			SliderBackground = Color3.fromRGB(255, 0, 0),
+			SliderProgress = Color3.fromRGB(255, 0, 0),
+			SliderStroke = Color3.fromRGB(0, 160, 230),
 
 			ToggleBackground = Color3.fromRGB(255, 255, 255),
-			ToggleEnabled = Color3.fromRGB(0, 220, 255), -- Bright cyan when enabled
-			ToggleDisabled = Color3.fromRGB(200, 200, 200), -- Light gray when disabled
-			ToggleEnabledStroke = Color3.fromRGB(0, 230, 255),
+			ToggleEnabled = Color3.fromRGB(255, 0, 0),
+			ToggleDisabled = Color3.fromRGB(200, 200, 200),
+			ToggleEnabledStroke = Color3.fromRGB(220, 0, 0),
 			ToggleDisabledStroke = Color3.fromRGB(180, 180, 180),
 			ToggleEnabledOuterStroke = Color3.fromRGB(200, 200, 200),
 			ToggleDisabledOuterStroke = Color3.fromRGB(220, 220, 220),
 
-			InputBackground = Color3.fromRGB(0, 198, 255), -- Cyan for inputs
+			InputBackground = Color3.fromRGB(255, 0, 0),
 			InputStroke = Color3.fromRGB(0, 150, 220),
 			PlaceholderColor = Color3.fromRGB(150, 150, 150)
 		}
